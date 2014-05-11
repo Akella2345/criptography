@@ -17,3 +17,12 @@ practica1.py (by order)
 - Square roots with Chinese Theorem.
 - Factorization with Fermat
 - Factorization with Pollard
+
+practica1.py (by order)
+------------
+- Golomb Postulates (Aux functions: rachas and hamming)
+- LFRS
+- LNFRS
+- GEFFE
+- BerlekampMassey
+- Encrypt/descrypt using geffe
