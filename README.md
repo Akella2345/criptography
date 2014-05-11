@@ -18,7 +18,7 @@ practica1.py (by order)
 - Factorization with Fermat
 - Factorization with Pollard
 
-practica1.py (by order)
+practica2.py (by order)
 ------------
 - Golomb Postulates (Aux functions: rachas and hamming)
 - LFRS
