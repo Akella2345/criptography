@@ -46,14 +46,14 @@ def exponenciacion(a,k,n):
 
     for i in kbin:
         if(i=='1'):
-            b = multiplicacion(A,b)%n         
-        A = multiplicacion(A,A)%n        
+            b = (A*b)%n         
+        A = (A*A)%n        
         
     return b
     
-def MillerRabinStep(n,m,l):      
+def MillerRabinStep(n,l,m):      
  
-    alea = random.randint(2,n-2)
+    alea = random.randint(3,n-2)
     a = exponenciacion(alea,m,n)
     
     if(a==1 or a==-1%n):
@@ -65,20 +65,18 @@ def MillerRabinStep(n,m,l):
                 return True
             elif(a==1):
                 return False
-        return False
-
     return False
 
 def MillerRabin(n,k):
     
     if(n%2==0):
         return False
-    
+    #Goldwasser: let n-1 = 2^l*m where m is odd
     m, l = n-1, 0
-    while (m%2==0):
+    while (m%2!=0):
         l+=1; m/=2
     for i in range(1,k):
-        if(not MillerRabinStep(n,m,l)):
+        if(not MillerRabinStep(n,l,m)):
             return False
 
     return True
